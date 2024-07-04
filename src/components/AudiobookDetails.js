@@ -1,57 +1,3 @@
-// // frontend/src/components/AudiobookDetails.js
-
-// import React, { useState, useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
-// import axios from 'axios';
-// import ReviewForm from './ReviewForm';
-
-// function AudiobookDetails() {
-//   const { id } = useParams();
-//   const [audiobook, setAudiobook] = useState(null);
-
-//   useEffect(() => {
-//     axios.get(`http://localhost:5000/api/audiobooks/${id}`)
-//       .then(response => {
-//         setAudiobook(response.data);
-//       });
-//   }, [id]);
-
-//   if (!audiobook) return <div>Loading...</div>;
-
-//   return (
-//     <div>
-//       <h1>{audiobook.title}</h1>
-//       <p>{audiobook.author}</p>
-//       <p>{audiobook.description}</p>
-//       <ReviewForm audiobookId={id} />
-//     </div>
-//   );
-// }
-
-// export default AudiobookDetails;
-// import React from 'react';
-// import { useParams } from 'react-router-dom';
-
-// const AudiobookDetails = ({ audiobooks }) => {
-//   const { id } = useParams();
-//   const audiobook = audiobooks.find(ab => ab._id === id);
-
-//   if (!audiobook) {
-//     return <h2>Audiobook not found</h2>;
-//   }
-
-//   return (
-//     <div className="audiobook-details">
-//       <h2>{audiobook.title}</h2>
-//       <p>by {audiobook.author}</p>
-//       <img src={audiobook.coverImage} alt={audiobook.title} />
-//       <p>{audiobook.description}</p>
-//       <p>Genre: {audiobook.genre}</p>
-//       <p>Rating: {audiobook.rating}</p>
-//     </div>
-//   );
-// };
-
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -152,7 +98,6 @@ const AudiobookDetails = ({ audiobooks }) => {
   );
 };
 
-// export default AudiobookDetails;
 
 
 export default AudiobookDetails;

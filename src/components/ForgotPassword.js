@@ -5,45 +5,43 @@ import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-
-const Login = () => {
+const ForgotPassword = () => {
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
 
     const navigate=useNavigate()
     Axios.defaults.withCredentials=true;
     const handleSubmit = (e) => {
         e.preventDefault()
-        Axios.post('http://localhost:3000/auth/login', { email, password, })
+        Axios.post('http://localhost:3000/auth/forgot-password', { email, })
         .then(response=>{
             if(response.data.status){
-                navigate('/')
+                alert("check your email to reset password link")
+                navigate('/login')
             }
+            console.log(response.data)
         })
         .catch(err=>{
             console.log(err)
         })
-    };
-
-    return (
-        <div className='sign-up-container'>
-            <h2>Login</h2>
+    }
+  return (
+    <div>
+      <div className='sign-up-container'>
+            <h2>Forgot Password</h2>
              <form className='sign-up-form' onSubmit={handleSubmit}>
+                
 
                 <label htmlFor="email">Email:</label>
                 <input type="email" placeholder='Email'
                     onChange={(e) => setEmail(e.target.value)} />
 
-                <label htmlFor="password">Password:</label>
-                <input type="password" placeholder='********'
-                    onChange={(e) => setPassword(e.target.value)} />
 
-                <button type='submit'>Login</button>
-                <Link to="/forgotPassword">Forgot Password?</Link>
-                <p>Don't have an account?<Link to="/signup" >Sign Up</Link></p>
+                <button type='submit'>Send</button>
+                <p>Recalled the password? <Link to="/login" >Go to Login</Link></p>
             </form>
         </div>
-    )
+    </div>
+  )
 }
 
-export default Login;
+export default ForgotPassword

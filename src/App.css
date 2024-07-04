@@ -1,5 +1,8 @@
 
 body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   font-family: 'Arial', sans-serif;
   background-color: #f5f5f5;
   color: #333;
@@ -8,17 +11,14 @@ body {
 
 
 
-
-
-
-
-
-
 /* App Header */
 .App-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   position: sticky;
   top: 0;
-  background-color: #282c34;
+  background-color: #fd3b3b;
   padding: 20px;
   color: white;
   z-index: 1000;
@@ -33,6 +33,9 @@ body {
 }
 
 .App-header nav a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   color: #ff9900;
   text-decoration: none;
   margin: 0 1rem;
@@ -52,6 +55,7 @@ body {
 }
 
 .audiobook-item {
+  /* display: flex; */
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -205,11 +209,11 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-  transform: scale(1.5); /* Increase size by 1.5 times */
+  transform: scale(1.5); 
 }
 
 .audiobook-card:hover {
-  transform: scale(1.6); /* Slightly larger on hover */
+  transform: scale(1.6); 
 }
 
 .audiobook-card img {
@@ -236,7 +240,7 @@ body {
 .app-header {
   position: sticky;
   top: 0;
-  background-color: #282c34;
+  background-color: #fd3939;
   padding: 10px 20px;
   color: white;
   display: flex;
@@ -298,7 +302,7 @@ body {
 }
 
 .audiobook-card {
-  width: 45%; /* 1.5 times the original 30% width */
+  width: 45%; 
   margin: 15px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -309,7 +313,7 @@ body {
 }
 
 .audiobook-card:hover {
-  transform: scale(1.05); /* Slightly larger on hover */
+  transform: scale(1.05); 
 }
 
 .audiobook-card img {
@@ -361,12 +365,13 @@ body {
 .app-header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #333;
+  padding: 25px 20px;
+  background-color: #eb3131;
   color: white;
 }
 
 .header-left, .header-center, .header-right {
+
   display: flex;
   align-items: center;
 }
@@ -774,30 +779,30 @@ body {
 
 .audiobook-container {
   display: flex;
-  flex-direction: row; /* Aligns children horizontally */
-  max-width: 100%; /* Full width to accommodate both child elements */
-  margin: 20px auto; /* Center the container on the page */
+  flex-direction: row; 
+  max-width: 100%; 
+  margin: 20px auto;
 }
 
 .filter-box {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  width: 300px; /* Fixed width for the filter box */
-  flex-shrink: 0; /* Prevents the filter box from shrinking */
+  width: 300px; 
+  flex-shrink: 0; 
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-right: 20px; /* Space between filter box and audiobook list */
+  margin-right: 20px;
 }
 
 .audiobook-list {
-  flex-grow: 1; /* Takes up remaining space */
+  flex-grow: 1; 
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between each audiobook card */
+  gap: 20px; 
 }
 
 .audiobook-item {
-  flex: 1 1 240px; /* Flexibility in item size, with a base size of 240px */
+  flex: 1 1 240px; 
   background: #fff;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -807,14 +812,14 @@ body {
 .filter-box input[type="text"], .filter-box input[type="number"], .filter-box input[type="radio"] {
   width: 100%;
   padding: 8px;
-  margin-bottom: 10px; /* Adds space below each input */
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .filter-box input[type="text"]:focus, .filter-box input[type="number"]:focus {
-  border-color: #0056b3; /* Highlight focus with a blue border */
-  box-shadow: 0 0 0 2px rgba(0,86,179,0.25); /* Soft glow effect */
+  border-color: #0056b3; 
+  box-shadow: 0 0 0 2px rgba(0,86,179,0.25); 
 }
 
 .rating-group {
@@ -830,7 +835,7 @@ body {
   box-shadow: 0 0 0 2px rgba(0,86,179,0.25); /* Glow effect on focus */
 }
 .login-container {
-  width: 300px;
+  width: 500px;
   margin: 50px auto;
   padding: 20px;
   background-color: #f1f1f1;
@@ -867,4 +872,59 @@ body {
 
 .login-container button:hover {
   background-color: #003d7a;
+}
+
+
+/* signup.css */
+
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  /* min-width: none;
+  max-width: 28%; */
+  margin: auto;
+}
+
+.sign-up-container h2 {
+  margin-bottom: 20px;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sign-up-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.sign-up-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sign-up-form button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sign-up-form button:hover {
+  background-color: #0056b3;
 }

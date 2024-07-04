@@ -16,7 +16,7 @@ const AudiobookList = ({ audiobooks }) => {
     }));
   };
 
-  // Function to apply filters
+
   const filteredAudiobooks = audiobooks.filter(audiobook => {
     const genreMatch = !filter.genre || audiobook.genre.toLowerCase() === filter.genre.toLowerCase();
     const authorMatch = !filter.author || audiobook.author.toLowerCase() === filter.author.toLowerCase();
